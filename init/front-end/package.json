@@ -1,0 +1,26 @@
+{
+  "name": "btc-meme-ory",
+  "version": "1.0.0",
+  "description": "\"A memory game based on memes ¯\\\\(ツ)\\\\/¯.\"",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ButtePaillade91/TP_Web.git"
+  },
+  "keywords": [
+    "Memory"
+  ],
+  "author": "BTC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ButtePaillade91/TP_Web/issues"
+  },
+  "homepage": "https://github.com/ButtePaillade91/TP_Web#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

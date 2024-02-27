@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -17,5 +16,15 @@
     "lodash": "^4.17.11",
     "swagger-jsdoc": "^7.0.0-rc.6",
     "swagger-ui-express": "^4.0.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ButtePaillade91/TP_Web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ButtePaillade91/TP_Web/issues"
+  },
+  "homepage": "https://github.com/ButtePaillade91/TP_Web#readme",
+  "description": ""
 }
