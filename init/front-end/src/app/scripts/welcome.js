@@ -1,10 +1,7 @@
-// TODO #import-html: use ES default imports to import welcome.html as template
-  // TODO #export-functions: export function WelcomeComponent
-  // TODO #class: use the ES6 class keyword
-  /* class WelcomeComponent constructor  */
+import template from "../views/welcome.html";
   export function WelcomeComponent() {
     // TODO #extends: call super(template)
-    // TODO #import-html: assign template to this.template
+    this.template = template;
   }
 
   // TODO #export-functions: remove this line
