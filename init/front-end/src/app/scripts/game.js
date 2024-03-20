@@ -63,9 +63,7 @@ const CARD_TEMPLATE = ""
     /* method GameComponent.init */
     init() {
       // fetch the cards configuration from the server
-      this.fetchConfig(
-        // TODO #arrow-function: use arrow function instead.
-        function (config) {
+      this.fetchConfig(config => {
           this._config = config;
           this._boardElement = document.querySelector(".cards");
 
@@ -86,13 +84,11 @@ const CARD_TEMPLATE = ""
               "click",
               function () {
                 this._flipCard(card);
-              }.bind(this)
-            );
+              });
           }
 
           this.start();
-        }.bind(this)
-      );
+        });
     };
     // TODO #class: turn function into a method of GameComponent
 
@@ -101,12 +97,9 @@ const CARD_TEMPLATE = ""
       this._boardElement.appendChild(card.getElement());
 
       card.getElement().addEventListener(
-        "click",
-        // TODO #arrow-function: use arrow function instead.
-        function () {
+        "click", () => {
           this._flipCard(card);
-        }.bind(this)
-      );
+        });
     };
 
     // TODO #class: turn function into a method of GameComponent
@@ -118,15 +111,11 @@ const CARD_TEMPLATE = ""
       document.querySelector("nav .navbar-title").textContent =
         "Player: " + this._name + ". Elapsed time: " + seconds++;
 
-      this._timer = setInterval(
-        // TODO #arrow-function: use arrow function instead.
-        function () {
+      this._timer = setInterval(() => {
           // TODO #template-literals:  use template literals (backquotes)
           document.querySelector("nav .navbar-title").textContent =
             "Player: " + this._name + ". Elapsed time: " + seconds++;
-        }.bind(this),
-        1000
-      );
+        }, 1000);
     };
 
     // TODO #class: turn function into a method of GameComponent
@@ -140,8 +129,7 @@ const CARD_TEMPLATE = ""
       // TODO #template-literals:  use template literals (backquotes)
       xhr.open("get", environment.api.host + "/board?size=" + this._size, true);
 
-      // TODO #arrow-function: use arrow function instead.
-      xhr.onreadystatechange = function () {
+      xhr.onreadystatechange = () => {
         let status;
         let data;
         // https://xhr.spec.whatwg.org/#dom-xmlhttprequest-readystate
@@ -167,9 +155,7 @@ const CARD_TEMPLATE = ""
       );
       clearInterval(this._timer);
 
-      setTimeout(
-        // TODO #arrow-function: use arrow function instead.
-        function () {
+      setTimeout(() => {
           // TODO #spa: replace with './#score'
           const scorePage = "./#score";
           // TODO #template-literals:  use template literals (backquotes)
@@ -181,9 +167,7 @@ const CARD_TEMPLATE = ""
             this._size +
             "&time=" +
             timeElapsedInSeconds;
-        }.bind(this),
-        750
-      );
+        }, 750);
     };
 
     // TODO #class: turn function into a method of GameComponent
@@ -224,9 +208,7 @@ const CARD_TEMPLATE = ""
 
           // cards did not match
           // wait a short amount of time before hiding both cards
-          setTimeout(
-            // TODO #arrow-function: use arrow function instead.
-            function () {
+          setTimeout(() => {
               // hide the cards
               this._flippedCard.flip();
               card.flip();
@@ -234,9 +216,7 @@ const CARD_TEMPLATE = ""
 
               // reset flipped card for the next turn.
               this._flippedCard = null;
-            }.bind(this),
-            500
-          );
+            }, 500);
         }
       }
     };
