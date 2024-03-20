@@ -69,23 +69,17 @@ const CARD_TEMPLATE = ""
 
           // create cards out of the config
           this._cards = [];
-          // TODO #functional-programming: use Array.map() instead.
-          for (let i in this._config.ids) {
-            this._cards[i] = new CardComponent(this._config.ids[i]);
-          }
+          
+          this._cards = this._config.ids.map(id => new CardComponent(id));
 
-          // TODO #functional-programming: use Array.forEach() instead.
           // TODO #let-const: replace var with let.
-          for (let i in this._cards) {
-            let card = this._cards[i];
+          this._cards.forEach(card => {
             this._boardElement.appendChild(card.getElement());
 
-            card.getElement().addEventListener(
-              "click",
-              function () {
+            card.getElement().addEventListener("click", () => {
                 this._flipCard(card);
-              });
-          }
+            });
+          });
 
           this.start();
         });
