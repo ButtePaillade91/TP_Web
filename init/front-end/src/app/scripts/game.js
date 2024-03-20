@@ -166,11 +166,11 @@ var CARD_TEMPLATE = ""
         // TODO #arrow-function: use arrow function instead.
         function () {
           // TODO #spa: replace with './#score'
-          var scorePage = "./#score.html";
+          var scorePage = "./#score";
           // TODO #template-literals:  use template literals (backquotes)
           window.location =
             scorePage +
-            "?name=" +
+            "?name=" +  
             this._name +
             "&size=" +
             this._size +
@@ -265,10 +265,10 @@ var CARD_TEMPLATE = ""
     equals(card) {
       return card._id === this._id;
     }; 
-    get _flipped() {
+    get flipped() {
       return this._flipped;
     }
-    set _flipped(_flipped) {
-      this._flipped = _flipped;
+    set flipped(newFlip) {
+      this._flipped = newFlip;
     }
   }
