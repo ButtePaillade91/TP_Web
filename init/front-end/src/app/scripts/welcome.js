@@ -10,7 +10,7 @@ import template from "../views/welcome.html";
   // TODO #class: turn function into a method of WelcomeComponent
   /* method WelcomeComponent.init */
   WelcomeComponent.prototype.init = function init() {
-    var form = document.querySelector("form.form-signin");
+    const form = document.querySelector("form.form-signin");
 
     form.addEventListener(
       "submit",
@@ -21,8 +21,8 @@ import template from "../views/welcome.html";
           event.stopPropagation();
           form.classList.add("was-validated");
         } else {
-          var name = event.srcElement.querySelector("#nickname").value;
-          var size = parseInt(event.srcElement.querySelector("#size").value);
+          const name = event.srcElement.querySelector("#nickname").value;
+          const size = parseInt(event.srcElement.querySelector("#size").value);
 
           _startGame(name, size);
         }
@@ -36,7 +36,7 @@ import template from "../views/welcome.html";
   // TODO #class: turn function into a method of WelcomeComponent
   function _startGame(name, size) {
     // TODO #spa: replace with './#game'
-    var gamePage = "./#game";
+    const gamePage = "./#game";
     // TODO #template-literals:  use template literals (backquotes)
     window.location = gamePage + "?name=" + name + "&size=" + size;
   }

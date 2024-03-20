@@ -6,7 +6,7 @@ import { parseUrl } from "./utils";
   /* class ScoreComponent constructor */
   export function ScoreComponent() {
     // TODO #extends: call super(template)
-    var params = parseUrl();
+    const params = parseUrl();
     // TODO #import-html: assign template to this.template
     this.name = params.name;
     this.size = parseInt(params.size);
