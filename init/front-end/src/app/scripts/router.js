@@ -11,7 +11,7 @@
   outlet.appendChild(template);
   }
   /**
-   * Create a new router. This router will load components into the given outlet.
+   * Create a   . This router will load components into the given outlet.
    * @param {HTMLElement} outlet The element to put components into.
    */
   // TODO #export-router: export this function

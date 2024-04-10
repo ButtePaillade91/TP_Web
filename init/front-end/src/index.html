@@ -6,7 +6,6 @@
     <!-- TODO #import-css: move style imports to src/main.js -->
     <!-- TODO #npm-bootstrap: change css location to '/node_modules/bootstrap/dist/css/bootstrap.css' -->
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
-
     <link rel="stylesheet" href="/src/app/styles/style.css" />
 
     <script>
@@ -14,24 +13,12 @@
   </head>
 
   <body>
-    <nav class="navbar bg-primary mb-3 shadow">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex" href="/src">
-          <img
-            class="d-inline-block align-top"
-            src="/src/assets/logo_take_my_money.png"
-            alt="logo"
-          />
-          <span class="align-self-center m-2">MÈME ory</span>
-        </a>
-        <span class="navbar-title"></span>
+    <my-navbar></my-navbar>
+    <section class="overflow-auto flex-grow-1 d-flex flex-column">
+      <div class="container-fluid flex-grow-1">
+        <div id="content-outlet" class="h-100 w-100 d-flex flex-column"></div>
       </div>
-    </nav>
-
-    <div id="content-outlet" class="h-100 w-100 d-flex flex-column"></div>
-
-    <footer class="p-3 bg-dark">
-      <span>&copy The MEME-Ory corporation | 2022</span>
-    </footer>
+      <my-footer></my-footer>
+    </section>
   </body>
 </html>
